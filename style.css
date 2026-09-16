@@ -9,12 +9,12 @@ form{
 
     width: 400px;
 
-    background-color: bisque;
+    background-color: rgb(156, 130, 99);
 
     padding: 20px;
     margin: 50px auto;
 
-    border: 1px solid #a17777;
+    border: 1px solid #382626;
     border-radius: 10px;
 
 }
@@ -27,8 +27,8 @@ label{
 
 input{
 
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;    
+    width: 120%;
+    padding: 112px;
+    margin-bottom: 10px;    
     
 }
