@@ -217,7 +217,7 @@ section {
                                             /*        PROJETOS         */
                                             /*=========================*/
 
-.projeto-secao {
+.projetos-secao {
     background-color: #0f0f14;
 }
 
@@ -335,4 +335,16 @@ section {
                                             /*     RESPONSAVIDADE      */
                                             /*=========================*/
 
-@media (max-width: 800px)
+@media (max-width: 800px) {
+    .sobre-conteudo {
+        flex-direction: column;
+    }
+
+    .projetos {
+        flex-direction: column;
+    }
+
+    .contato-links {
+        flex-wrap: wrap;
+    }
+}
