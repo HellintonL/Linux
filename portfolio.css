@@ -336,15 +336,52 @@ section {
                                             /*=========================*/
 
 @media (max-width: 800px) {
-    .sobre-conteudo {
+
+                                            /*=========================*/
+                                            /*       MENU / HEADER     */
+                                            /*=========================*/
+            
+    header {
+        height: auto;
+        padding: 20x 5%;
         flex-direction: column;
+        gap: 15px;
     }
 
-    .projetos {
-        flex-direction: column;
-    }
+                                            /*=========================*/
+                                            /*        LINKS MENU       */
+                                            /*=========================*/
 
-    .contato-links {
+    nav {  
+        gap: 15px;
         flex-wrap: wrap;
+        justify-content: center;  
+
     }
+
+                                            /*=========================*/
+                                            /*         INICIO          */
+                                            /*=========================*/
+
+    .inicio{
+        min-height: auto;
+        padding: 70px 5%;
+    }
+
+    .apresentacao {
+        font-size: 24px;
+    }
+
+    .inicio h1 {
+        font-size: 48px;
+    }
+
+    .inicio h2 {
+        font-size: 24px;
+    }
+
+    .descricao {
+        font-size: 16px;
+    }
+
 }
