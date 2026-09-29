@@ -25,5 +25,7 @@ else {
     <label>Idade:</label>
     <input type="number" class="idade" id="idade" name="idade">
     </form>
+
+    <p> <?= $resultado ?>  </p>
 </body>
 </html>
