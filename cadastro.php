@@ -32,7 +32,7 @@
     <input type="text" class="nome" id="nome" name="nome">
     
     <label>Dada de nascimento:</label>
-    <input type="number" class="nascimento" id="nascimento" name="nascimento">
+    <input type="date" class="nascimento" id="nascimento" name="nascimento">
 
     <label>Email</label>
     <input type="email" class="email" id="email" name="email">
