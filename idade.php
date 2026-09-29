@@ -18,6 +18,7 @@ else {
     <title>Document</title>
 </head>
 <body>
+    <h1>Verificador de idade</h1>
     <form method="POST">
     <label>Nome:</label>
     <input type="text" class="nome" id="nome" name="nome">
@@ -27,6 +28,6 @@ else {
     <button type="submit">Enviar</button>
     </form>
 
-    <p> <?= $resultado ?>  </p>
+    <h2> <?= $resultado ?>  </h2>
 </body>
 </html>
