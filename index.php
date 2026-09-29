@@ -111,9 +111,9 @@
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
-                        <!--span>PHP</span-->
+                        <span>PHP</span>
                     </div>
-                    <a href="cadastro.html">Ver projetos</a>
+                    <a href="cadastro.php">Ver projetos</a>
                 </div>
 
                 <!--  Projeto 2-->
