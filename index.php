@@ -1,4 +1,4 @@
-<?php
+<!--?php
     $nome = "Hellinton";
     $idade = 29;
     $altura = 1.78;
@@ -11,14 +11,7 @@
     else {
         $resultado = "É de menor!";
     }
-
-
-
-
-
-
-
-?>
+?-->
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -34,8 +27,7 @@
 
     <header>
         <div class="logo">
-            <h2> <?= $resultado ?> </h2>
-            <!--h2>Hellinton <span>Lima</span></h2>-->
+            <h2>Hellinton <span>Lima</span></h2>
         </div>
         <nav>
             <a href="#inicio">Início</a>
@@ -57,7 +49,7 @@
                 <h1>Hellinton Lima</h1>
                 <h2>Desenvolvedor de Software</h2>
                 <p class="descricao">
-                    Estudando tecnologia, em busca do meu primeiro emprego na área.
+                    Estudando tecnologia, em busca da minha primeira oportunidade na área.
                 </p>
                 <div class="botoes">
                     <a href="#projetos" class="botao">Ver projetos</a>
