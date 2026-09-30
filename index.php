@@ -84,10 +84,10 @@
                         <h3>CSS</h3>
                         <p>Estilização e crianção de interface.</p>
                     </div>
-                    <!--div class="habilidade">
+                    <div class="habilidade">
             <h3>PHP</h3>
             <p>Desenvolvimento de aplicações web.</p>
-        </div-->
+        </div>
 
                 </div>
             </div>
@@ -104,16 +104,16 @@
                     <div class="numero-projeto">
                         01
                     </div>
-                    <h3>Sistema de cadastro</h3>
+                    <h3>Verificador de idade | POST</h3>
                     <p>
-                        Descrição do sistema de cadastro
+                        Verificador de idade
                     </p>
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="cadastro.php">Ver projetos</a>
+                    <a href="idade-post.php">Ver projetos</a>
                 </div>
 
                 <!--  Projeto 2-->
@@ -121,7 +121,7 @@
                     <div class="numero-projeto">
                         02
                     </div>
-                    <h3>Verificador de idade</h3>
+                    <h3>Verificador de idade | GET</h3>
                     <p>
                     Verificador de idade
                     </p>
@@ -130,7 +130,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="idade.php">Ver projetos</a>
+                    <a href="idade-get.php">Ver projetos</a>
                 </div>
 
                 <!-- Projeto 3 -->

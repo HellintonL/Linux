@@ -1,13 +1,13 @@
 <?php
-$nome = $_POST["nome"];
-$idade = $_POST["idade"];
-$resultado = " ";
-if ($idade >= 18){
-    $resultado = "Maior de idade!";
-}
-else {
-    $resultado = "Menor de idade!";
-}    
+    $nome = $_POST["nome"];
+    $idade = $_POST["idade"];
+    $resultado = " ";
+    if ($idade >= 18){
+        $resultado = "Maior de idade!";
+    }
+    else {
+        $resultado = "Menor de idade!";
+    }    
 ?>
 
 <!DOCTYPE html>
