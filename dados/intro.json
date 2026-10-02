@@ -1,0 +1,22 @@
+[
+    {
+    "nome": "Hellinton",
+    "idade": 29,
+    "altura": 1.80,
+    "notas": {
+        "1 Bimestre": {
+            "Prova1": 10
+        },
+        "2 Bimestre": {
+            "Prova2": 10
+        },
+        "3 Bimestre": {
+            "Prova3": 10
+        }
+    }
+    },
+
+    {
+
+    } 
+]

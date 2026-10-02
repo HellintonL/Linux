@@ -1,0 +1,994 @@
+EXPLICAÇÃO SIMPLES DOS CÓDIGOS HTML E CSS
+==========================================
+
+Este arquivo explica, de forma resumida e simples, o que existe nos arquivos
+index.html e portfolio.css.
+
+IDEIA GERAL
+-----------
+O index.html é o conteúdo do site. Ele informa quais textos, títulos, botões,
+seções e links devem aparecer.
+
+O portfolio.css é a aparência do site. Ele informa as cores, tamanhos,
+espaçamentos, posições, bordas, efeitos ao passar o mouse e o comportamento
+em telas menores.
+
+
+PARTE 1 - EXPLICAÇÃO DO index.html
+==================================
+
+<!DOCTYPE html>
+Informa ao navegador que o arquivo usa o padrão atual do HTML.
+
+<html lang="pt-BR">
+É o começo de toda a página. O lang="pt-BR" informa que o idioma principal é
+português do Brasil.
+
+<head>
+É a parte com informações de configuração da página. Essas informações não
+aparecem como conteúdo principal para quem visita o site.
+
+<meta charset="UTF-8">
+Permite que acentos e caracteres do português apareçam corretamente.
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Faz a página se ajustar melhor ao tamanho da tela, principalmente no celular.
+
+<title>Hellinton Lima | Portfólio</title>
+Define o nome que aparece na aba do navegador.
+
+<link rel="stylesheet" href="portfolio.css">
+Conecta o HTML ao arquivo portfolio.css. Assim, o navegador aplica os estilos
+do CSS à página.
+
+</head>
+Encerra a área de configurações.
+
+<body>
+Começa a parte que o visitante realmente vê na página.
+
+
+MENU SUPERIOR
+-------------
+
+<header>
+Cria o cabeçalho, que é a faixa superior do site.
+
+<div class="logo">
+Agrupa o nome usado como logotipo.
+
+<h2>Hellinton <span>Lima</span></h2>
+Mostra o nome Hellinton Lima. A palavra Lima está dentro de span para receber
+uma cor diferente no CSS.
+
+<nav>
+Indica que os links dentro dele formam o menu de navegação.
+
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#projetos">Projetos</a>
+<a href="#contato">Contato</a>
+São links que levam para partes da mesma página. O símbolo # procura o
+elemento que possui o mesmo id, como id="sobre".
+
+</header>
+Encerra o cabeçalho.
+
+
+CONTEÚDO PRINCIPAL
+------------------
+
+<main>
+Agrupa o conteúdo principal do portfólio.
+
+
+SEÇÃO INÍCIO
+------------
+
+<section id="inicio" class="inicio">
+Cria a primeira seção da página. O id="inicio" permite que o link Início
+chegue até ela, e class="inicio" permite aplicar estilos do CSS.
+
+<div class="inicio-conteudo">
+Agrupa os textos e botões da apresentação inicial.
+
+<p class="apresentacao">Olá, eu sou</p>
+Mostra uma pequena apresentação.
+
+<h1>Hellinton Lima</h1>
+Mostra o título principal da página com o nome do profissional.
+
+<h2>Desenvolvedor de Software</h2>
+Mostra a profissão ou área de atuação.
+
+<p class="descricao">...</p>
+Apresenta uma breve descrição: a pessoa estuda tecnologia e procura o primeiro
+emprego na área.
+
+<div class="botoes">
+Agrupa os dois botões da apresentação.
+
+<a href="#projetos" class="botao">Ver projetos</a>
+Leva o visitante até a seção de projetos.
+
+<a href="#contato" class="botao botao-secundario">Entrar em contato</a>
+Leva o visitante até a seção de contato. Possui duas classes: uma geral para
+o botão e outra para sua aparência secundária.
+
+
+SEÇÃO SOBRE MIM
+---------------
+
+<section id="sobre" class="sobre">
+Cria a seção sobre o profissional. O id permite que o menu encontre essa área.
+
+<div class="titulo-secao">
+Agrupa o pequeno texto de introdução e o título da seção.
+
+<p>Conheã um pouco</p>
+Texto curto acima do título. No código aparece "Conheã", provavelmente uma
+digitação que deveria ser "Conheça".
+
+<h2>Sobre mim</h2>
+Título da seção.
+
+<div class="sobre-conteudo">
+Agrupa o texto pessoal e a lista de habilidades lado a lado.
+
+<div class="sobre-texto">
+Contém dois parágrafos sobre o estudante e seus objetivos.
+
+<div class="habilidades">
+Agrupa as habilidades apresentadas.
+
+<div class="habilidade">
+Representa uma habilidade individual.
+
+<h3>HTML</h3>
+Mostra a habilidade HTML.
+
+<p>Estilização e criação de interface.</p>
+Explica brevemente a habilidade. Apesar do texto dizer estilização, o HTML é
+principalmente usado para estruturar o conteúdo; o CSS é a parte que estiliza.
+
+Existe outra habilidade igual para CSS.
+
+O trecho do PHP está dentro de comentário HTML:
+<!-- ... -->
+Por isso, ele não aparece na página. Se o comentário for removido, PHP será
+mostrado como outra habilidade.
+
+
+SEÇÃO MEUS PROJETOS
+-------------------
+
+<section id="projetos" class="projetos-secao">
+Cria a área que apresenta os trabalhos.
+
+<div class="projetos">
+Agrupa os cartões dos projetos.
+
+Cada <div class="card"> é um cartão de projeto e possui:
+
+<div class="numero-projeto">01</div>
+Mostra o número do projeto. Os outros cartões usam 02 e 03.
+
+<h3>Sistema de cadastro</h3>
+Mostra o nome do projeto.
+
+<p>Descrição do sistema de cadastro</p>
+Mostra a descrição do projeto.
+
+<div class="tecnologias">
+Agrupa pequenas etiquetas com as tecnologias usadas.
+
+<span>HTML</span> e <span>CSS</span>
+Mostram as tecnologias do projeto.
+
+O PHP está novamente em comentário, então não aparece.
+
+<a href="cadastro.html">Ver projetos</a>
+Cria um link para o arquivo cadastro.html. Os três cartões usam o mesmo link.
+
+Os três cartões têm o mesmo nome e descrição no código atual; apenas o número
+é diferente.
+
+
+SEÇÃO CONTATO
+-------------
+
+<section id="contato" class="contato">
+Cria a área para encontrar formas de contato.
+
+<p>Vamos conversar?</p> e <h2>Contato</h2>
+São o texto de introdução e o título da seção.
+
+<div class="contato-links">
+Agrupa os links de contato.
+
+WhatsApp:
+https://wa.me/5541998525117
+Abre uma conversa no WhatsApp usando o número informado.
+
+Email:
+mailto:hellintonlima.tech@gmail.com
+Abre o programa ou serviço de email do visitante para enviar uma mensagem.
+
+GitHub:
+https://github.com/HellintonL
+Leva ao perfil do GitHub.
+
+LinkedIn:
+https://www.linkedin.com/in/hellinton-lima
+Leva ao perfil do LinkedIn.
+
+
+RODAPÉ
+------
+
+<footer class="footer">
+Cria a parte final do site.
+
+Desenvolvido por Hellinton Lima
+Mostra quem desenvolveu a página e leva ao endereço:
+https://hellinton755.devlook.xyz
+
+HTML + CSS
+Informa as tecnologias usadas no portfólio.
+
+</body> e </html>
+Encerram o conteúdo visível e o documento HTML.
+
+
+PARTE 2 - EXPLICAÇÃO DO portfolio.css
+=====================================
+
+COMO LER UMA REGRA CSS
+----------------------
+Um seletor, como .card, escolhe quais elementos serão alterados.
+As propriedades dentro de { } dizem o que será alterado.
+Por exemplo: color muda a cor e padding cria espaço interno.
+
+
+CONFIGURAÇÕES GERAIS
+--------------------
+
+* {
+Aplica a regra a todos os elementos.
+
+margin: 0;
+padding: 0;
+Remove espaços automáticos do navegador para começar com um visual controlado.
+
+html {
+scroll-behavior: smooth;
+Faz a página deslizar suavemente quando um link interno é clicado.
+
+body {
+Define a aparência geral do site.
+
+font-family: Arial, Helvetica, sans-serif;
+Escolhe a fonte. Arial é a primeira opção; as outras são alternativas.
+
+background-color: #0f0f14;
+Define um fundo escuro.
+
+color: #f5f5f5;
+Define a cor padrão dos textos como quase branca.
+
+line-height: 1.6;
+Aumenta o espaço entre linhas para facilitar a leitura.
+
+a {
+text-decoration: none;
+Remove o sublinhado padrão dos links.
+
+color: inherit;
+Faz o link usar a cor definida pelo elemento ao redor, até que outra cor seja
+definida.
+
+
+MENU
+----
+
+header {
+height: 80px;
+Define a altura do menu.
+
+padding: 0 10%;
+Cria espaço nas laterais do menu; 10% significa uma parte proporcional à tela.
+
+display: flex;
+Coloca os itens em uma organização flexível.
+
+justify-content: space-between;
+Coloca o logo de um lado e o menu do outro, com espaço entre eles.
+
+align-items: center;
+Centraliza os itens verticalmente.
+
+background-color: #15151d;
+Define o fundo do cabeçalho.
+
+border-bottom: 1px solid #292936;
+Cria uma linha fina na parte inferior.
+
+position: sticky; top: 0;
+Mantém o cabeçalho preso no topo enquanto a página rola.
+
+z-index: 10;
+Coloca o cabeçalho acima de outros elementos quando houver sobreposição.
+
+.logo h2 { font-size: 26px; }
+Deixa o nome do logo com tamanho de 26 pixels.
+
+.logo span { color: #1c5cff; }
+Pinta apenas a palavra dentro de span de azul.
+
+nav { display: flex; gap: 30px; }
+Coloca os links do menu em linha e deixa 30 pixels entre eles.
+
+nav a {
+color: #b8b8c7;
+Deixa os links em cinza claro.
+
+font-size: 15px;
+Define o tamanho da letra.
+
+transition: 0.3s;
+Deixa mudanças de aparência suaves em 0,3 segundo.
+
+nav a:hover { color: #7c5cff; }
+Quando o mouse passa sobre um link, ele fica roxo.
+
+
+INÍCIO
+------
+
+.inicio {
+min-height: calc(100vh - 80px);
+Faz a seção ocupar pelo menos o restante da altura da tela depois do menu.
+
+padding: 80px 10%;
+Cria espaço interno vertical e nas laterais.
+
+display: flex; align-items: center;
+Usa flexbox e centraliza o conteúdo verticalmente.
+
+background-color: #0f0f14;
+Define o fundo escuro da primeira seção.
+
+.inicio-conteudo { max-width: 750px; }
+Impede que o conteúdo fique largo demais.
+
+.apresentacao e .inicio h1
+Usam texto grande, forte e com linhas compactas. A apresentação fica roxa e o
+nome principal recebe tamanho de 70 pixels.
+
+.inicio h2
+Usa tamanho de 32 pixels, cor cinza e espaço abaixo.
+
+.descricao
+Limita a largura do texto, deixa-o cinza, aumenta a letra para 18 pixels e
+cria espaço abaixo.
+
+
+BOTÕES
+------
+
+.botoes {
+display: flex; gap: 15px;
+Coloca os botões lado a lado com 15 pixels de distância.
+
+.botao {
+display: inline-block;
+Faz o link se comportar visualmente como um botão.
+
+background-color: #7c5cff;
+Deixa o botão roxo.
+
+color: #ffffff;
+Deixa o texto branco.
+
+padding: 13px 25px;
+Cria espaço dentro do botão.
+
+border-radius: 8px;
+Arredonda os cantos.
+
+font-weight: bold;
+Deixa o texto em negrito.
+
+.botao:hover
+Quando o mouse passa, o botão muda para um roxo mais escuro e sobe 3 pixels.
+
+.botao-secundario
+Cria a versão contornada: fundo transparente, borda roxa e texto roxo. Ao
+passar o mouse, ela fica preenchida de roxo com texto branco.
+
+
+SEÇÕES E TÍTULOS
+----------------
+
+section { padding: 100px 10%; }
+Todas as seções recebem bastante espaço interno para não ficarem apertadas.
+
+.titulo-secao { margin-bottom: 50px; }
+Cria espaço abaixo dos títulos.
+
+.titulo-secao p
+Deixa o texto pequeno, roxo, em negrito, em letras maiúsculas e com maior
+distância entre letras.
+
+.titulo-secao h2 { font-size: 38px; }
+Define o tamanho dos títulos das seções.
+
+
+SOBRE E HABILIDADES
+-------------------
+
+.sobre { background-color: #15151d; }
+Usa um fundo um pouco diferente para separar a seção.
+
+.sobre-conteudo {
+display: flex; gap: 60px; align-items: center;
+Coloca o texto e as habilidades lado a lado, com espaço entre eles e alinhamento
+centralizado.
+
+.sobre-texto { flex: 1; color: #b8b8c7; }
+Divide o espaço disponível e deixa o texto cinza claro.
+
+.sobre-texto p { margin-bottom: 20px; }
+Separa os parágrafos.
+
+.habilidades {
+flex: 1; display: flex; flex-direction: column; gap: 15px;
+Reserva espaço para as habilidades, colocando cada uma em uma linha.
+
+.habilidade {
+background-color: #1d1d27;
+padding: 20px;
+border-radius: 8px;
+Cria um bloco escuro, com espaço interno e cantos arredondados.
+
+border-left: 4px solid #7c5cff;
+Cria uma faixa roxa na lateral esquerda.
+
+.habilidade h3 e .habilidade p
+Organizam o título da habilidade e deixam sua explicação menor e acinzentada.
+
+
+PROJETOS E CARTÕES
+------------------
+
+.projetos-secao { background-color: #0f0f14; }
+Define o fundo da seção de projetos.
+
+.projetos { display: flex; gap: 25px; }
+Coloca os cartões em linha, com 25 pixels entre eles.
+
+.card {
+flex: 1;
+Faz os cartões dividirem o espaço disponível de forma equilibrada.
+
+background-color: #191922;
+Define o fundo do cartão.
+
+padding: 30px;
+Cria espaço entre a borda e o conteúdo.
+
+border: 1px solid #292936;
+Adiciona uma borda fina.
+
+border-radius: 12px;
+Arredonda os cantos do cartão.
+
+transition: 0.3s;
+Suaviza mudanças causadas pelo mouse.
+
+.card:hover
+Ao passar o mouse, o cartão sobe 8 pixels e sua borda fica roxa.
+
+.numero-projeto
+Deixa o número do projeto pequeno, roxo, em negrito e com espaço abaixo.
+
+.card h3
+Define o tamanho do nome do projeto e o espaço abaixo dele.
+
+.card p
+Deixa a descrição cinza e cria espaço antes das tecnologias.
+
+.card > a
+Colore de roxo apenas o link que é filho direto do cartão e o deixa em negrito.
+
+.tecnologias
+Coloca as etiquetas de tecnologia em linha, com pequeno espaço entre elas.
+
+.tecnologias span
+Cria o visual de etiqueta: fundo escuro, texto cinza, espaço interno, cantos
+levemente arredondados e letra pequena.
+
+
+CONTATO
+-------
+
+.contato { background-color: #15151d; text-align: center; }
+Usa fundo diferente e centraliza o conteúdo.
+
+.contato .titulo-secao { margin-bottom: 20px; }
+Diminui o espaço abaixo do título nessa seção.
+
+.contato-texto
+Define largura máxima, centraliza o parágrafo e deixa o texto cinza. Atualmente
+não existe nenhum elemento com essa classe no HTML, então essa regra não tem
+efeito visível.
+
+.contato-links
+Coloca os links no centro e deixa 15 pixels entre eles.
+
+.contato-links a
+Cria uma borda, espaço interno e cantos arredondados nos links.
+
+.contato-links a:hover
+Ao passar o mouse, a borda e o texto ficam roxos, e o link sobe 3 pixels.
+
+
+RODAPÉ
+------
+
+.footer {
+padding: 25px 10%;
+Cria espaço interno.
+
+background-color: #0b0b10;
+Usa um fundo ainda mais escuro.
+
+color: #7c7c80;
+Deixa o texto cinza.
+
+display: flex; justify-content: space-between;
+Coloca as duas informações do rodapé em lados opostos.
+
+font-size: 13px;
+Deixa o texto pequeno.
+
+
+ADAPTAÇÃO PARA CELULAR
+----------------------
+
+@media (max-width: 800px)
+As regras dentro desse bloco só são usadas quando a tela tem até 800 pixels de
+largura, como em muitos celulares e tablets.
+
+.sobre-conteudo { flex-direction: column; }
+Coloca o texto e as habilidades um abaixo do outro.
+
+.projetos { flex-direction: column; }
+Coloca os cartões de projetos um abaixo do outro.
+
+.contato-links { flex-wrap: wrap; }
+Permite que os links de contato que não couberem na mesma linha passem para a
+linha seguinte.
+
+
+RESUMO FINAL
+------------
+
+Este resumo serve como uma consulta rápida. Sempre que aparecer uma palavra
+desconhecida, procure-a abaixo para entender o que ela é, por que existe e o
+que ela faz neste portfólio.
+
+
+1. COMO HTML E CSS TRABALHAM JUNTOS
+-----------------------------------
+
+HTML = é a estrutura e o conteúdo da página. Ele cria títulos, textos, áreas,
+botões e links. É como a planta de uma casa: informa quais cômodos existem.
+
+CSS = é a aparência da página. Ele escolhe cores, tamanhos, espaços, posições
+e efeitos. É como a decoração e a organização dos cômodos.
+
+O navegador lê o HTML, monta os elementos da página e depois aplica as regras
+do CSS que combinam com esses elementos. Por isso, o HTML pode continuar com
+o mesmo texto enquanto o CSS muda completamente o visual.
+
+HTML sem CSS ainda funciona, mas fica simples e sem a aparência planejada.
+CSS sem HTML não tem elementos para estilizar. Os dois arquivos dependem um do
+outro neste projeto.
+
+
+2. PARTES BÁSICAS DO HTML
+-------------------------
+
+<!DOCTYPE html>
+O que é: uma declaração sobre o padrão do documento.
+Por que existe: ajuda o navegador a interpretar a página corretamente.
+
+<html>
+O que é: o elemento que envolve todo o documento.
+Por que existe: informa onde começa e termina a página HTML.
+
+lang="pt-BR"
+O que é: uma informação sobre o idioma.
+Por que existe: ajuda navegadores, mecanismos de busca e leitores de tela a
+entenderem que o conteúdo está em português do Brasil.
+
+<head>
+O que é: área de configurações e informações da página.
+Por que existe: guarda dados que o navegador precisa, mas que não são o
+conteúdo principal mostrado na tela.
+
+<body>
+O que é: área visível do site.
+Por que existe: tudo que o visitante lê ou utiliza fica dentro dela.
+
+<meta charset="UTF-8">
+O que é: definição do conjunto de caracteres.
+Por que existe: permite mostrar corretamente letras como ã, ç e é.
+
+<meta name="viewport" ...>
+O que é: uma configuração para o tamanho da tela.
+Por que existe: faz o site usar corretamente a largura de celulares, tablets
+e computadores.
+
+<title>
+O que é: o título da página.
+Por que existe: aparece na aba do navegador e ajuda a identificar o site.
+
+<link rel="stylesheet" href="portfolio.css">
+O que é: uma ligação entre arquivos.
+Por que existe: importa o CSS para que ele possa estilizar o HTML.
+
+<!-- texto -->
+O que é: um comentário.
+Por que existe: serve para anotar ou desativar um trecho sem apagá-lo.
+Comentários não aparecem na página. No projeto, o PHP está comentado e por
+isso não aparece.
+
+
+3. ELEMENTOS DE CONTEÚDO DO HTML
+--------------------------------
+
+<header>
+O que é: o cabeçalho.
+Por que existe: reúne o logo e o menu que ficam no topo.
+
+<nav>
+O que é: uma área de navegação.
+Por que existe: deixa claro que os links dentro dela formam o menu principal.
+
+<main>
+O que é: o conteúdo principal.
+Por que existe: organiza a parte mais importante do portfólio, como início,
+apresentação, projetos e contato.
+
+<section>
+O que é: uma divisão temática da página.
+Por que existe: separa assuntos diferentes e facilita a navegação.
+Neste site, as seções são início, sobre, projetos e contato.
+
+<footer>
+O que é: o rodapé.
+Por que existe: guarda informações finais, como o nome de quem desenvolveu o
+site e as tecnologias usadas.
+
+<div>
+O que é: um agrupador genérico.
+Por que existe: junta elementos para que possam ser organizados ou estilizados
+como um grupo. Ele não mostra nada especial sozinho.
+
+<span>
+O que é: um agrupador pequeno dentro de um texto.
+Por que existe: permite estilizar somente uma parte, como a palavra Lima no
+logo.
+
+<h1>, <h2> e <h3>
+O que são: títulos de níveis diferentes.
+Por que existem: organizam a importância dos assuntos. h1 é o título principal;
+h2 representa seções; h3 representa partes menores, como habilidades e cards.
+
+<p>
+O que é: um parágrafo.
+Por que existe: apresenta frases e descrições de forma organizada.
+
+<a>
+O que é: um link.
+Por que existe: permite ir para outra parte da página, outro arquivo ou outro
+site. No portfólio, também é usado para criar os botões.
+
+href
+O que é: o endereço guardado dentro de um link.
+Por que existe: informa para onde o visitante será levado.
+href="#sobre" leva a uma área da mesma página.
+href="cadastro.html" abre outro arquivo do projeto.
+href="https://..." abre um endereço externo.
+href="mailto:..." prepara um novo email.
+
+
+4. NOMES QUE LIGAM HTML E CSS
+-----------------------------
+
+class="nome"
+O que é: um nome que pode ser usado por vários elementos.
+Por que existe: permite aplicar o mesmo estilo a elementos parecidos.
+Exemplo: todos os elementos com class="card" recebem o visual de cartão.
+
+id="nome"
+O que é: um identificador destinado a uma área específica.
+Por que existe: os links do menu usam o id para encontrar a seção correta.
+Exemplo: href="#projetos" procura id="projetos".
+Um id normalmente deve ser único na página.
+
+.nome no CSS
+O ponto antes do nome significa "procure uma class".
+Exemplo: .card escolhe todos os elementos com class="card".
+
+#nome no CSS
+O sinal de número significa "procure um id".
+Embora o CSS deste projeto use principalmente classes, o HTML usa ids para
+os links internos.
+
+nome do elemento no CSS
+Quando o CSS escreve body, header, p ou a sem ponto e sem #, ele escolhe todos
+os elementos daquele tipo.
+
+Seletor combinado, como .contato-links a
+Escolhe os links que estão dentro da área .contato-links.
+
+Seletor com >, como .card > a
+Escolhe apenas um link que é filho direto do cartão, evitando atingir links
+mais profundos dentro de outros elementos.
+
+
+5. COMO UMA REGRA CSS É FORMADA
+-------------------------------
+
+.card {
+	 padding: 30px;
+}
+
+.card = seletor: diz quem receberá a regra.
+padding = propriedade: diz qual característica será modificada.
+30px = valor: diz quanto espaço será aplicado.
+{ } = chaves: marcam o começo e o fim das regras.
+; = ponto e vírgula: separa uma propriedade da próxima.
+
+Se duas regras definem a mesma coisa, o navegador considera a combinação de
+seletor, ordem e especificidade para decidir qual regra vence. Por isso, uma
+regra mais específica, como .contato-links a, pode mudar apenas os links de
+contato sem alterar todos os links do site.
+
+
+6. PROPRIEDADES DE ESPAÇO E TAMANHO
+-----------------------------------
+
+margin
+O que é: espaço do lado de fora do elemento.
+Por que existe: separa um elemento dos elementos vizinhos.
+
+padding
+O que é: espaço dentro do elemento, entre o conteúdo e sua borda.
+Por que existe: evita que textos e botões fiquem encostados nas bordas.
+
+border
+O que é: uma linha ao redor do elemento.
+Por que existe: separa visualmente cartões, links e áreas.
+
+border-radius
+O que é: arredondamento dos cantos.
+Por que existe: deixa botões, cartões e etiquetas com aparência menos rígida.
+
+width e max-width
+O que são: largura fixa ou largura máxima.
+Por que existem: controlam quanto espaço um elemento pode ocupar. max-width
+ajuda textos longos a continuarem confortáveis de ler.
+
+height e min-height
+O que são: altura e altura mínima.
+Por que existem: garantem que áreas como o início tenham tamanho suficiente.
+
+px
+O que é: uma unidade de medida em pixels.
+Por que existe: define valores como 80px de altura ou 25px de espaço.
+
+%
+O que é: uma medida proporcional ao tamanho disponível.
+Por que existe: 10% nas laterais permite que o espaço acompanhe o tamanho da
+tela.
+
+vh
+O que é: uma unidade baseada na altura da janela. 100vh significa a altura
+inteira da área visível.
+Por que existe: calc(100vh - 80px) faz a seção inicial ocupar a tela menos o
+espaço usado pelo menu de 80 pixels.
+
+calc(...)
+O que é: uma conta feita pelo CSS.
+Por que existe: combina medidas para chegar a um tamanho que se adapta à tela.
+
+
+7. CORES E TEXTOS
+-----------------
+
+color
+Muda a cor do texto.
+
+background-color
+Muda a cor do fundo.
+
+#0f0f14, #15151d e outras cores com #
+São cores escritas no formato hexadecimal. Cada código representa uma mistura
+de vermelho, verde e azul. Neste site, os tons escuros formam o fundo e os
+tons roxos e azuis destacam links, títulos e bordas.
+
+font-family
+Escolhe a família da fonte. O navegador tenta Arial primeiro e usa Helvetica
+ou sans-serif se a primeira opção não estiver disponível.
+
+font-size
+Controla o tamanho das letras.
+
+font-weight
+Controla a espessura das letras. bold deixa o texto em negrito.
+
+line-height
+Controla a distância entre linhas e melhora a leitura dos parágrafos.
+
+text-align
+Alinha o texto. O contato usa center para ficar centralizado.
+
+text-decoration
+Controla sublinhados e outras decorações. none remove o sublinhado padrão.
+
+text-transform
+Muda a forma de exibição das letras. uppercase mostra o texto em maiúsculas.
+
+letter-spacing
+Controla o espaço entre letras. O título pequeno das seções usa esse recurso
+para ficar mais espaçado.
+
+
+8. ORGANIZAÇÃO COM FLEXBOX
+--------------------------
+
+display: flex
+O que é: um modo de organização do CSS.
+Por que existe: coloca elementos lado a lado ou em coluna e facilita o
+alinhamento sem precisar posicionar tudo manualmente.
+
+flex-direction
+Escolhe a direção. row coloca itens em linha; column coloca itens empilhados.
+
+flex: 1
+Permite que elementos dividam o espaço disponível de forma equilibrada. É por
+isso que texto e habilidades, ou os três cartões, ocupam áreas parecidas.
+
+justify-content
+Organiza os itens no sentido principal. space-between coloca o logo e o menu
+nas extremidades do cabeçalho; center centraliza os links de contato.
+
+align-items
+Alinha os itens no sentido contrário ao principal. center deixa os elementos
+alinhados no centro.
+
+gap
+Cria uma distância uniforme entre itens, como os links do menu e os cartões.
+
+flex-wrap
+Permite que os itens pulem para a próxima linha quando não houver espaço.
+No contato, evita que os links saiam da tela em larguras menores.
+
+
+9. POSIÇÃO E EFEITOS
+--------------------
+
+position: sticky
+Mantém o cabeçalho acompanhando a rolagem quando ele chega ao topo.
+
+top: 0
+Diz que o cabeçalho deve ficar a zero pixels do topo quando estiver preso.
+
+z-index: 10
+Define a ordem de sobreposição. O cabeçalho fica acima de elementos que tenham
+uma ordem menor.
+
+transition: 0.3s
+Faz mudanças de cor, borda ou posição acontecerem suavemente.
+
+:hover
+É um estado ativado quando o mouse passa sobre um elemento. No site, muda
+links para roxo, levanta botões e eleva cartões para mostrar que são interativos.
+
+transform: translateY(-3px) ou translateY(-8px)
+Move o elemento verticalmente para cima sem mudar o lugar dos outros elementos.
+
+
+10. RESPONSIVIDADE
+------------------
+
+Responsividade = capacidade de uma página se adaptar a diferentes telas.
+Ela é necessária porque um computador tem muito mais largura que um celular.
+
+@media (max-width: 800px)
+O CSS dentro dessa condição só entra em ação quando a janela tem até 800 pixels.
+
+flex-direction: column
+Muda conteúdos lado a lado para conteúdos empilhados. Isso facilita a leitura
+no celular.
+
+flex-wrap: wrap
+Permite que os links que não cabem em uma linha passem para a linha seguinte.
+
+O meta viewport do HTML e o @media do CSS trabalham juntos: o primeiro informa
+o tamanho real da tela ao navegador e o segundo muda o layout quando necessário.
+
+
+11. O QUE ACONTECE QUANDO A PÁGINA ABRE
+---------------------------------------
+
+1. O navegador encontra o index.html.
+2. Ele identifica o idioma, o título e a configuração para telas menores.
+3. Ele lê o conteúdo dentro do body e cria as áreas da página.
+4. Ele encontra o link para portfolio.css.
+5. Ele aplica as regras gerais e depois as regras específicas de cada class.
+6. O visitante vê o menu, o início, o resumo pessoal, os projetos, o contato
+	e o rodapé.
+7. Quando o visitante clica no menu, o navegador procura o id correspondente.
+8. Quando passa o mouse sobre links ou cartões, as regras :hover mostram os
+	efeitos visuais.
+9. Se a tela tiver até 800 pixels, as regras @media reorganizam o conteúdo.
+
+
+12. DIFERENÇA ENTRE APARECER E FUNCIONAR
+----------------------------------------
+
+Um texto aparecer na tela não significa que ele execute uma função complexa.
+Neste projeto, HTML e CSS cuidam da estrutura e do visual. Os links levam a
+outras partes ou endereços, mas não existe JavaScript para ações avançadas,
+como enviar dados, validar formulários ou salvar cadastros.
+
+O link para cadastro.html só funcionará se esse arquivo existir na mesma pasta.
+Os links de WhatsApp, email, GitHub e LinkedIn dependem dos endereços informados
+e de o visitante ter acesso à internet.
+
+
+13. TRADUÇÃO DOS PRINCIPAIS TERMOS
+----------------------------------
+
+HTML = linguagem que estrutura a página.
+CSS = linguagem que estiliza a página.
+tag = marca entre sinais < > que cria ou identifica um elemento HTML.
+elemento = uma parte criada pelo HTML, como um título ou parágrafo.
+atributo = informação extra dentro da tag, como class, id ou href.
+class = nome reutilizável para aplicar estilos.
+id = nome único para identificar uma área.
+seletor = parte do CSS que escolhe os elementos que receberão regras.
+propriedade = característica que o CSS pode modificar.
+valor = resultado escolhido para uma propriedade.
+regra CSS = seletor junto com suas propriedades e valores.
+link = caminho clicável para outra área ou página.
+âncora = link que aponta para uma parte da mesma página usando # e um id.
+container = elemento usado para agrupar outros elementos.
+flexbox = sistema do CSS para organizar elementos em linhas ou colunas.
+layout = maneira como os elementos ficam distribuídos na tela.
+responsividade = adaptação do layout a diferentes tamanhos de tela.
+hover = estado de um elemento enquanto o mouse está sobre ele.
+comentário = anotação ignorada pelo navegador e que não aparece para o visitante.
+
+
+14. RESUMO EM UMA FRASE PARA CADA PARTE DO PROJETO
+--------------------------------------------------
+
+index.html: diz o que o site possui e qual texto cada parte mostra.
+portfolio.css: diz como cada parte deve parecer e se organizar.
+header: mostra o nome e ajuda a navegar.
+inicio: apresenta o profissional logo na chegada.
+sobre: explica quem é o profissional e quais habilidades possui.
+projetos: mostra trabalhos em cartões.
+contato: oferece maneiras de falar com o profissional.
+footer: encerra a página com informações finais.
+class: conecta elementos do HTML às regras do CSS.
+id: conecta os links do menu às seções da página.
+flexbox: organiza os elementos de forma prática.
+hover: mostra uma reação visual ao passar o mouse.
+@media: reorganiza o site para telas menores.
