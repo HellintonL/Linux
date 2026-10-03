@@ -39,32 +39,48 @@
                     "prova2" => $fisica_prova2,
                     "prova3" => $fisica_prova3,
                 ],
+
             ]
+
         ];
 
-        echo "<h2> DADOS RECEBIDOS </h2>";
+                                                    // SERVE PARA LER/ABRIR ARQUIVOS JSON
 
-        echo "Nome: " . $nome . "<br";
-        echo "Idade:" . $idade . "<br><br>";
+        $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
 
-        echo "<strong>Português:</strong><br>";
-        echo "Prova 1: " . $portugues_prova1 . "<br>";
-        echo "Prova 2: " . $portugues_prova2 . "<br>";
-        echo "Prova 3: " . $portugues_prova3 . "<br>";
-        "<br><br>";
+                                                    // SERVE PARA CONVERTER JSON PARA ARRAY PHP
+                                                    // O TRUE SERVE PARA CONVERTER JSON EM UM ARRAY ASSOCIATIVO PARA O PHP LER
 
-        echo "<strong>Português:</strong><br>";
-        echo "Prova 1: " . $matematica_prova1 . "<br>";
-        echo "Prova 2: " . $matematica_prova2 . "<br>";
-        echo "Prova 3: " . $matematica_prova3 . "<br>";
-        "<br><br>";
+        $alunos = json_decode($conteudoJson, true);
 
-        echo "<strong>Português:</strong><br>";
-        echo "Prova 1: " . $fisica_prova1 . "<br>";
-        echo "Prova 2: " . $fisica_prova2 . "<br>";
-        echo "Prova 3: " . $fisica_prova3 . "<br>";
-        "<br><br>";
+                                                    // ADICIONAR O NOVO ALUNO AO ARMAZENAMENTO
+
+        $alunos[] = $novoAluno;
+
+                                                    // CONVERTER ARRAY PHP PARA JSON
+
+        $jsonAtualizado = json_encode(
+            $alunos,
+
+            JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE
+
+        );
+
+                                                    // SALVAR NO ARQUIVO JSON
+
+        file_put_contents(__DIR__ . "/dados/intro.json", $jsonAtualizado);
+
+        
     }
+
+                                                    // LÊ OS ARQUICOS JSON PARA EXIBIÇÃO
+                    
+    $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
+
+                                                    // CONVERTE O JSON PARA ARRAY PHP
+
+    $alunos = json_decode($conteudoJson, true);
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -113,6 +129,39 @@
         <br><br>
         <button type="submit">Enviar</button>
     </form>
+    <h1>ALUNOS CADASTRADOS</h1>
+
+    <?php foreach ($alunos as $aluno) { ?>
+        <h2> <?= $aluno["nome"]  ?> </h2>
+        <p>  Idade: <?= $aluno["idade"] ?></p>
+
+                                                        <!-- PORTUGUÊS -->
+
+        <h2>PORTUGUÊS</h2>
+        <p>Prova 1: <?= $aluno["notas"]["portugues"]["prova1"] ?></p>
+        <p>Prova 2: <?= $aluno["notas"]["portugues"]["prova2"] ?></p>
+        <p>Prova 3: <?= $aluno["notas"]["portugues"]["prova3"] ?></p>
+
+
+                                                        <!-- MATEMÁTICA -->
+
+        <h2>MATEMÁTICA</h2>
+        <p>Prova 1: <?= $aluno["notas"]["matematica"]["prova1"] ?></p>
+        <p>Prova 2: <?= $aluno["notas"]["matematica"]["prova2"] ?></p>
+        <p>Prova 3: <?= $aluno["notas"]["matematica"]["prova3"] ?></p>
+
+                                                        <!-- FÍSICA -->
+
+        <h2>FÍSICA</h2>
+        <p>Prova 1: <?= $aluno["notas"]["fisica"]["prova1"] ?></p>
+        <p>Prova 2: <?= $aluno["notas"]["fisica"]["prova2"] ?></p>
+        <p>Prova 3: <?= $aluno["notas"]["fisica"]["prova3"] ?></p>
+        
+
+    <?php } ?>
+
+
+
     
 </body>
 </html>

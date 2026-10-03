@@ -1,0 +1,6 @@
+array normal x array associativo
+
+JSON_PRETTY_PRINT = formata o texto
+JSON_UNESCAPED_UNICODE = entende os caracteres especiais e mantem eles, principalmente em português
+
+foreach = laço de repetição parcial / vai executar o código uma vez apenas para cada registro
