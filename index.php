@@ -147,7 +147,7 @@
                         <span>CSS</span>
                         <!--span>PHP</span-->
                     </div>
-                    <a href="dadosjson.php">Ver projetos</a>
+                    <a href="dados-json.php">Ver projetos</a>
                 </div>
             </div>
         </section>
