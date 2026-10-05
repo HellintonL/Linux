@@ -117,7 +117,7 @@
         <label>Prova 3:</label>
         <input type="number" name="matematica_prova1" min="0" max="10" step="0.1" required>
         <br><br>
-        <label>Física</label>
+        <h2>Física</h2>
         <label>Prova 1:</label>
         <input type="number" name="fisica_prova1" min="0" max="10" step="0.1" required>
         <br><br>
