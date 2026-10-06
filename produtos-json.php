@@ -66,7 +66,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
+    <title>Produtos</title>]
+    <nav>
+    <a href="index.php">Inicio</a>
+    </nav>
 </head>
 <body>
     <h1>CADASTRO DE PRODUTOS</h1>
@@ -111,3 +114,4 @@
     <?php } ?>
 </body>
 </html>
+<script></script>
