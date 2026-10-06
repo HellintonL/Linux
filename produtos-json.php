@@ -49,6 +49,11 @@
 
         $conteudoJson = file_put_contents(__DIR__ . "/dados/produtos.json", $jsonAtualizado);
 
+                                                    // MANDA O NAVEGADOR PARA A PÁGINA NOVAMENTE
+                                                    
+        header("Location: " . $_SERVER["PHP_SELF"]);
+        exit;
+
     }
 
                                                     // LÊ OS ARQUIVOS JSON PARA EXIBIÇÃO
