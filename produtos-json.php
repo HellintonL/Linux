@@ -95,7 +95,7 @@
     <input type="text" name = "paisOrigem" required>
     <br>    
     <button type="submit">Enviar</button>
-    ></form>
+    </form>
 
     <h1>PRODUTOS CADASTRADOS</h1>
     <?php foreach($produtos as $produto) { ?>
@@ -103,7 +103,7 @@
                <h2>PORTUGUÊS</h2>
         <p>Produto: <?= $produto["nomeProduto"]["produtos"]["nomeProduto"] ?></p>
         <p>categoria: <?= $produto["categoria"]["produtos"]["caregoria"] ?></p>
-        <p>Prova 3: <?= $aluno["notas"]["portugues"]["prova3"] ?></p>
+        <p>Marca: <?= $produto["marca"]["produtos"]["marca"] ?></p>
 
 
 
