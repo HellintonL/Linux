@@ -100,6 +100,7 @@
             <div class="projetos">
 
                 <!--  PROJETO 1 -->
+
                 <div class="card">
                     <div class="numero-projeto">
                         01
@@ -117,6 +118,7 @@
                 </div>
 
                 <!--  Projeto 2-->
+
                 <div class="card">
                     <div class="numero-projeto">
                         02
@@ -134,6 +136,7 @@
                 </div>
 
                 <!-- Projeto 3 -->
+
                 <div class="card">
                     <div class="numero-projeto">
                         03
@@ -145,10 +148,30 @@
                     <div class="tecnologias">
                         <span>HTML</span>
                         <span>CSS</span>
-                        <!--span>PHP</span-->
+                        <span>PHP</span>
                     </div>
                     <a href="dados-json.php">Ver projetos</a>
                 </div>
+
+                                <!--  PROJETO 4 -->
+                                  
+                <div class="card">
+                    <div class="numero-projeto">
+                        04
+                    </div>
+                    <h3>Cadastro de Produtos</h3>
+                    <p>
+                        Sistema para cadastro de produtos
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>JSON</span>
+                    </div>
+                    <a href="produtos-json.php">Ver projetos</a>
+                </div>
+
             </div>
         </section>
         <section id="contato" class="contato">
