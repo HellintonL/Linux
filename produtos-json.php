@@ -88,7 +88,7 @@
     <br>
 
     <h2>FABRICANTE</h2>
-    <label>Nome do Fabricante: </label>
+    <label>INFORMAÇÕES DO FABRICANTE: </label>
     <input type="text" name = "nomeFabricante" required>
     <br>
     <label>País de Origem: </label>
@@ -100,7 +100,6 @@
     <h1>PRODUTOS CADASTRADOS</h1>
     <?php foreach($produtos as $produto) { ?>
         <h2> <?= $produto["nomeProduto"] ?> </h2>
-               <h2>PORTUGUÊS</h2>
         <p>Produto: <?= $produto["produtos"]["nomeProduto"] ?></p>
         <p>categoria: <?= $produto["produtos"]["caregoria"] ?></p>
         <p>Marca: <?= $produto["produtos"]["marca"] ?></p>
