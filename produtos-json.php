@@ -87,8 +87,8 @@
     <input type="number" name = "quantidadeEstoque" min = "0" required>
     <br>
 
-    <h2>FABRICANTE</h2>
-    <label>INFORMAÇÕES DO FABRICANTE: </label>
+    <h2>INFORMAÇÕES DE FABRICANTE</h2>
+    <label>Fabricante: </label>
     <input type="text" name = "nomeFabricante" required>
     <br>
     <label>País de Origem: </label>
