@@ -28,7 +28,7 @@
         ];  
 
                                                     // LÊ O ARQUIVO JSON EXISTENTE
-        $caminhoArquivo = (__DIR__ . "dados/produtos.json");
+        $caminhoArquivo = (__DIR__ . "/dados/produtos.json");
 
         $conteudoJson = file_get_contents($caminhoArquivo);
 
@@ -47,13 +47,13 @@
 
                                                     // SALVAR NO ARQUIVO JSON
 
-        $conteudoJson = file_put_contents(__DIR__ . "dados/produtos.json", $jsonAtualizado);
+        $conteudoJson = file_put_contents(__DIR__ . "/dados/produtos.json", $jsonAtualizado);
 
     }
 
                                                     // LÊ OS ARQUIVOS JSON PARA EXIBIÇÃO
 
-    $conteudoJson = file_get_contents(__DIR__ . "dados/produtos.json");
+    $conteudoJson = file_get_contents(__DIR__ . "/dados/produtos.json");
 
                                                     // CONVERTE O JSON PARA ARRAY PHP
 
@@ -99,12 +99,12 @@
 
     <h1>PRODUTOS CADASTRADOS</h1>
     <?php foreach($produtos as $produto) { ?>
-        <h2> <?= $produto["nomeProduto"] ?> </h2>
-        <p>Produto: <?= $produto["produtos"]["nomeProduto"] ?></p>
-        <p>categoria: <?= $produto["produtos"]["caregoria"] ?></p>
-        <p>Marca: <?= $produto["produtos"]["marca"] ?></p>
-        <p>Preço: <?= $produto["produtos"]["preco"] ?></p>
-        <p>Quantidade em Estoque: <?= $produto["pudutos"]["quantidadeEstoque"] ?></p>
+        <h2> <?= $produto["produto"]["nomeProduto"] ?> </h2>
+        <p>Produto: <?= $produto["produto"]["nomeProduto"] ?></p>
+        <p>categoria: <?= $produto["produto"]["categoria"] ?></p>
+        <p>Marca: <?= $produto["produto"]["marca"] ?></p>
+        <p>Preço: <?= $produto["produto"]["preco"] ?></p>
+        <p>Quantidade em Estoque: <?= $produto["produto"]["quantidadeEstoque"] ?></p>
         <p>Nome do Fabricante: <?= $produto["fabricante"]["nomeFabricante"] ?></p>
         <p>País de Origem: <?= $produto["fabricante"]["paisOrigem"] ?></p>
 
