@@ -101,12 +101,14 @@
     <?php foreach($produtos as $produto) { ?>
         <h2> <?= $produto["nomeProduto"] ?> </h2>
                <h2>PORTUGUÊS</h2>
-        <p>Produto: <?= $produto["nomeProduto"]["produtos"]["nomeProduto"] ?></p>
-        <p>categoria: <?= $produto["categoria"]["produtos"]["caregoria"] ?></p>
-        <p>Marca: <?= $produto["marca"]["produtos"]["marca"] ?></p>
-
-
-
+        <p>Produto: <?= $produto["produtos"]["nomeProduto"] ?></p>
+        <p>categoria: <?= $produto["produtos"]["caregoria"] ?></p>
+        <p>Marca: <?= $produto["produtos"]["marca"] ?></p>
+        <p>Preço: <?= $produto["produtos"]["preco"] ?></p>
+        <p>Quantidade em Estoque: <?= $produto["pudutos"]["quantidadeEstoque"] ?></p>
+        <p>Nome do Fabricante: <?= $produto["fabricante"]["nomeFabricante"] ?></p>
+        <p>País de Origem: <?= $produto["fabricante"]["paisOrigem"] ?></p>
+        
     <?php } ?>
 </body>
 </html>
