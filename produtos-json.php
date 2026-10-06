@@ -42,12 +42,12 @@
 
                                                     // CONVERTE ARRAY PHP PARA JSON
 
-        $jsonAtualiado = json_encode($produtos, 
+        $jsonAtualizado = json_encode($produtos, 
             JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
                                                     // SALVAR NO ARQUIVO JSON
 
-        $conteudoJson = file_get_contents(__DIR__ . "dados/produtos.json");
+        $conteudoJson = file_put_contents(__DIR__ . "dados/produtos.json", $jsonAtualizado);
 
     }
 
