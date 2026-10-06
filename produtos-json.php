@@ -71,27 +71,27 @@
 <body>
     <h1>CADASTRO DE PRODUTOS</h1>
     <form method = "POST">
-    <label>Nome do Produto:         </label>
+    <label>Nome do Produto: </label>
     <input type="text" name = "nomeProduto" required>
     <br>
-    <label>Categoria:               </label>
+    <label>Categoria: </label>
     <input type="text" name = "categoria" required>
     <br>
-    <label>Marca:                   </label>
+    <label>Marca: </label>
     <input type="text" name = "marca" required>
     <br>
-    <label>Preço:                   </label>
+    <label>Preço: </label>
     <input type="number" name = "preco" min = "0" required>
     <br>
-    <label>Quantidade em Estoque:   </label>
+    <label>Quantidade em Estoque: </label>
     <input type="number" name = "quantidadeEstoque" min = "0" required>
     <br>
 
     <h2>FABRICANTE</h2>
-    <label>Nome do Fabricante:      </label>
+    <label>Nome do Fabricante: </label>
     <input type="text" name = "nomeFabricante" required>
     <br>
-    <label>País de Origem:          </label>
+    <label>País de Origem: </label>
     <input type="text" name = "paisOrigem" required>
     <br>    
     <button type="submit">Enviar</button>
@@ -108,7 +108,7 @@
         <p>Quantidade em Estoque: <?= $produto["pudutos"]["quantidadeEstoque"] ?></p>
         <p>Nome do Fabricante: <?= $produto["fabricante"]["nomeFabricante"] ?></p>
         <p>País de Origem: <?= $produto["fabricante"]["paisOrigem"] ?></p>
-        
+
     <?php } ?>
 </body>
 </html>
