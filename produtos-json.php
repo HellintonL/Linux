@@ -50,7 +50,7 @@
         $conteudoJson = file_put_contents(__DIR__ . "/dados/produtos.json", $jsonAtualizado);
 
                                                     // MANDA O NAVEGADOR PARA A PÁGINA NOVAMENTE
-                                                    
+
         header("Location: " . $_SERVER["PHP_SELF"]);
         exit;
 
@@ -72,12 +72,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produtos</title>
-    <link rel="stylesheet" href="idade.css">
-    <nav>
-    <a href="index.php">Inicio</a>
-    </nav>
+    <link rel="stylesheet" href="idade.css">    
 </head>
 <body>
+    <a href="index.php">Inicio</a>
     <h1>CADASTRO DE PRODUTOS</h1>
     <form method = "POST">
     <label>Nome do Produto: </label>
@@ -120,4 +118,3 @@
     <?php } ?>
 </body>
 </html>
-<script></script>

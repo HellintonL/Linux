@@ -4,3 +4,16 @@ JSON_PRETTY_PRINT = formata o texto
 JSON_UNESCAPED_UNICODE = entende os caracteres especiais e mantem eles, principalmente em português
 
 foreach = laço de repetição parcial / vai executar o código uma vez apenas para cada registro
+
+Ir para outra página	<a href="">
+
+Enviar formulário	<button type="submit">
+
+Executar alguma ação com JavaScript	<button>
+
+Criar área de navegação	<nav>
+
+Configurar informações da página	<head>
+
+Mostrar conteúdo para o usuário	<body>
+
