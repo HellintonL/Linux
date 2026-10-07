@@ -17,3 +17,137 @@ Configurar informações da página	<head>
 
 Mostrar conteúdo para o usuário	<body>
 
+CRUD - Organização de código/documento
+
+C - CREAT
+    cadastrar um produto
+
+R - READ 
+    mostrar produtos cadastrados
+
+U - UPDATE 
+    alterar/atualizar o preço de um produto
+
+D - DELETE
+    apagar um produto
+
+PHP:
+
+file_put_contents - CREAT
+
+file_get_contents - READ
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+                UPDATE EM CRUD
+
+<?php
+            // caminho do arquivo json
+    $arquivo = __DIR__ . "/dados/intro.json";
+
+            // ler o arquivo json
+
+    $conteudo = file_get_contents($arquivo);
+
+            // transformar o json em um array php
+
+    $alunos = json_decode($conteudo, true);
+
+            // percorrer todos os alunos
+
+    foreach($alunos as $aluno) {
+
+            // procurando o aluno com nome "Maria"
+
+        if($aluno["nome"] == "Maria") {
+            $aluno["idade"] = 15;
+        }
+
+    }
+
+            // transformar array php em json novamente
+
+    $json = json_encode($alunos, 
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+            // salvar no arquivo
+
+    file_put_contents($arquivo, $$json);
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+DELETE CRUD
+
+<?php
+
+                // caminho do arquivo json
+
+    $arquivo = __DIR__ . "/dados/intro.json";
+
+                // ler o arquivo json
+
+    $conteudo = file_get_contents($arquivo);
+
+                // transformar o json em array php
+
+    $alunos = json_decode($conteudo, true);
+
+                // percorrer todos os alunos
+                // para cada aluno dentro de $aluno, guarde a posição dele em $posicao e os dados dele em $aluno
+
+    foreach($alunos as $posicao => $aluno) {
+
+                // procurar aluno em NOME: "Maria"
+
+        if($aluno["nome"] == "Maria") {
+
+                // excluir o aluno
+
+            unset($alunos[$posicao]);
+        }
+    }   
+
+                // reorganizar as posições de array
+
+    $alunos = array_values($alunos);
+
+                // transformar array php em json novamente
+                
+    $json = json_encode($alunos, 
+        JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+
+                // salvar no arquivo
+
+    file_put_contents($arquivo, $json);
+
+    echo "ALUNO EXCLUÍDO";
+
+    ?>    
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
