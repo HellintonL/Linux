@@ -19,7 +19,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hellinton Lima | Portfólio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="css/portfolio.css">
 </head>
 
 <body>
@@ -114,7 +114,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="idade-post.php">Ver projetos</a>
+                    <a href="atividades/idade-post.php">Ver projetos</a>
                 </div>
 
                 <!--  Projeto 2-->
@@ -132,7 +132,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="idade-get.php">Ver projetos</a>
+                    <a href="atividades/idade-get.php">Ver projetos</a>
                 </div>
 
                 <!-- Projeto 3 -->

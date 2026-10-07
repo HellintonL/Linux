@@ -151,3 +151,15 @@ DELETE CRUD
 </body>
 </html>
 
+------------------------------------------------------------------------------------------------------------------------
+
+<ul>	"Começa uma lista"
+</ul>	"Termina a lista"
+<li>	"Começa um item da lista"
+</li>	"Termina o item"
+<em>	"Destaca esse texto, geralmente em itálico"
+</em>	"Para o destaque"
+foreach	"Pega cada coisa dessa lista, uma por uma"
+endforeach	"Acabou a repetição"
+echo	"Mostra isso na tela"
+$empresa	"A empresa que estou olhando AGORA"
