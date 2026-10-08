@@ -103,7 +103,6 @@
 
                 <div class="card">
                     <div class="numero-projeto">
-                        01
                     </div>
                     <h3>Verificador de idade | POST</h3>
                     <p>
@@ -121,7 +120,6 @@
 
                 <div class="card">
                     <div class="numero-projeto">
-                        02
                     </div>
                     <h3>Verificador de idade | GET</h3>
                     <p>
@@ -139,7 +137,6 @@
 
                 <div class="card">
                     <div class="numero-projeto">
-                        03
                     </div>
                     <h3>Persistência de dados</h3>
                     <p>
@@ -157,7 +154,6 @@
                                   
                 <div class="card">
                     <div class="numero-projeto">
-                        04
                     </div>
                     <h3>Cadastro de Produtos</h3>
                     <p>
@@ -170,6 +166,24 @@
                         <span>JSON</span>
                     </div>
                     <a href="produtos-json.php">Ver projetos</a>
+                </div>
+
+                
+                                <!--  PROJETO 5 -->
+                                  
+                                <div class="card">
+                    <div class="numero-projeto">
+                    </div>
+                    <h3>Sistema de Média</h3>
+                    <p>
+                        Aprovado | Reprovado 
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                    </div>
+                    <a href="atividades/funcoes2.php">Ver projetos</a>
                 </div>
 
             </div>
