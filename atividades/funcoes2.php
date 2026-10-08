@@ -27,8 +27,8 @@
         
         nota2
         <input type="text" name = "nota2">
-        
-        <br>
+
+        <br><br>
 
         <button type="submit">Enviar</button>
 
