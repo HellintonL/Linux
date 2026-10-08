@@ -147,7 +147,7 @@
                         <span>CSS</span>
                         <span>PHP</span>
                     </div>
-                    <a href="dados-json.php">Ver projetos</a>
+                    <a href="atividades/dados-json.php">Ver projetos</a>
                 </div>
 
                                 <!--  PROJETO 4 -->
@@ -165,13 +165,13 @@
                         <span>PHP</span>
                         <span>JSON</span>
                     </div>
-                    <a href="produtos-json.php">Ver projetos</a>
+                    <a href="atividades/produtos-json.php">Ver projetos</a>
                 </div>
 
                 
                                 <!--  PROJETO 5 -->
                                   
-                                <div class="card">
+                <div class="card">
                     <div class="numero-projeto">
                     </div>
                     <h3>Sistema de Média</h3>

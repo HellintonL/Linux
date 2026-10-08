@@ -46,7 +46,7 @@
 
                                                     // SERVE PARA LER/ABRIR ARQUIVOS JSON
 
-        $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
+        $conteudoJson = file_get_contents(__DIR__ . "../dados/intro.json");
 
                                                     // SERVE PARA CONVERTER JSON PARA ARRAY PHP
                                                     // O TRUE SERVE PARA CONVERTER JSON EM UM ARRAY ASSOCIATIVO PARA O PHP LER
@@ -68,14 +68,14 @@
 
                                                     // SALVAR NO ARQUIVO JSON
 
-        file_put_contents(__DIR__ . "/dados/intro.json", $jsonAtualizado);
+        file_put_contents(__DIR__ . "../dados/intro.json", $jsonAtualizado);
 
         
     }
 
                                                     // LÊ OS ARQUICOS JSON PARA EXIBIÇÃO
                     
-    $conteudoJson = file_get_contents(__DIR__ . "/dados/intro.json");
+    $conteudoJson = file_get_contents(__DIR__ . "../dados/intro.json");
 
                                                     // CONVERTE O JSON PARA ARRAY PHP
 

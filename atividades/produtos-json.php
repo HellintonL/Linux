@@ -28,7 +28,7 @@
         ];  
 
                                                     // LÊ O ARQUIVO JSON EXISTENTE
-        $caminhoArquivo = (__DIR__ . "/dados/produtos.json");
+        $caminhoArquivo = (__DIR__ . "../dados/produtos.json");
 
         $conteudoJson = file_get_contents($caminhoArquivo);
 
@@ -47,7 +47,7 @@
 
                                                     // SALVAR NO ARQUIVO JSON
 
-        $conteudoJson = file_put_contents(__DIR__ . "/dados/produtos.json", $jsonAtualizado);
+        $conteudoJson = file_put_contents(__DIR__ . "../dados/produtos.json", $jsonAtualizado);
 
                                                     // MANDA O NAVEGADOR PARA A PÁGINA NOVAMENTE
 
@@ -58,7 +58,7 @@
 
                                                     // LÊ OS ARQUIVOS JSON PARA EXIBIÇÃO
 
-    $conteudoJson = file_get_contents(__DIR__ . "/dados/produtos.json");
+    $conteudoJson = file_get_contents(__DIR__ . "../dados/produtos.json");
 
                                                     // CONVERTE O JSON PARA ARRAY PHP
 
@@ -75,7 +75,7 @@
     <link rel="stylesheet" href="idade.css">    
 </head>
 <body>
-    <a href="index.php">Inicio</a>
+    <a href="../index.php">Inicio</a>
     <h1>CADASTRO DE PRODUTOS</h1>
     <form method = "POST">
     <label>Nome do Produto: </label>

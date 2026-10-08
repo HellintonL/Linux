@@ -18,7 +18,7 @@
     <title>Verificador de idade</title>
     <link rel="stylesheet" href="idade.css">
     <nav>
-        <a href="index.php">Inicio</a>
+        <a href="../index.php">Inicio</a>
     </nav>
 </head>
 <body>
