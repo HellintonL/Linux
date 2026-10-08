@@ -25,6 +25,8 @@
         nota1
         <input type="text" name = "nota1">
         
+        <br>
+        
         nota2
         <input type="text" name = "nota2">
 
