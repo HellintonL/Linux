@@ -186,6 +186,24 @@
                     <a href="atividades/funcoes2.php">Ver projetos</a>
                 </div>
 
+                                <!-- PROJETO 6 -->
+                <div class="card">
+                    <div class="numero-projeto">
+                    </div>
+                    <h3>Cadastro DATABASE</h3>
+                    <p>
+                        Sistema para cadastro em Banco de Dados 
+                    </p>
+                    <div class="tecnologias">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>PHP</span>
+                        <span>MySQL</span>
+                    </div>
+                    <a href="atividades/db1.php">Ver projetos</a>
+                </div>
+
+
             </div>
         </section>
         <section id="contato" class="contato">
