@@ -15,7 +15,7 @@
         $preco = $_POST["Preco"];
         $quantidade = $_POST ["quantidade"];
 
-        $sql - "INSERT INTO produtos (nome, preco, qauntidade) VALUES ('$nome', $preco, $quantidade)";
+        $sql = "INSERT INTO produtos (nome, preco, qauntidade) VALUES ('$nome', $preco, $quantidade)";
 
         $stmt = $pdo->prepare($sql);
 
