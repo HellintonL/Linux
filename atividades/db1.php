@@ -9,24 +9,16 @@ $sql = "CREATE TABLE IF NOT EXISTS produtos (
         quantidade INT NOT NULL)";
 
 
-echo "debug 1";
-
 $pdo->exec($sql);
 
-echo "debug 2";
 
 // 2. CADASTRAR PRODUTO
 if (isset($_POST["cadastrar"])) {
     $nome = $_POST["nome"];
     $preco = $_POST["Preco"];
     $quantidade = $_POST["quantidade"];
-    
-echo "debug 3";
 
     $sql = "INSERT INTO produtos (nome, preco, qauntidade) VALUES ('$nome', $preco, $quantidade)";
-
-    
-echo "debug 4";
 
     $stmt = $pdo->prepare($sql);
 
