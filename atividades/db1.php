@@ -19,10 +19,7 @@
 
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute([
-            "nome" => $nome,
-            "preco" => $preco,
-            "quantidade" => $quantidade]);
+        $stmt->execute();
     }
 
                         // 3. ATUALIZAR PRODUTO
@@ -36,11 +33,7 @@
 
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute([
-            "nome" => $nome,
-            "preco" => $preco,
-            "quantidade" => $id,
-            "id" => $id]);
+        $stmt->execute();
     }
 
                         // 4. EXCLUIR PRODUTO
@@ -51,8 +44,7 @@
 
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute([
-            "id" => $id]);
+        $stmt->execute();
     }
 
                         // 5. BUSCAR PRODUTO PARA EDIÇÃO
@@ -65,7 +57,7 @@
 
         $stmt = $pdo->prepare($sql);
 
-        $stmt->execute(["id" => "$id"]);
+        $stmt->execute();
 
         $produtoEditar = $stmt->fetch(PDO::FETCH_ASSOC);
     }
@@ -138,9 +130,10 @@
                 <td> <?= $produto["quantidade"] ?> </td>
                 <td>
                         <!-- EDITAR -->
-                    <a href="index.php?editar=<?= $produto['id'] ?>">Editar</a>
+                    <a href="db1.php?editar=<?= $produto['id'] ?>">Editar</a>
+
                         <!-- EXCLUIR -->
-                    <form method="POST" action="index.php" style="display:inline";>
+                    <form method="POST" action="db1.php" style="display:inline";>
                         <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                         <button type="submit" name="excluir" onclick="return confirm ('Deseja excluir esse produto')">Excluir</button>
                     </form>
