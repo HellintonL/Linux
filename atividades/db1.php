@@ -137,7 +137,7 @@ $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <a href="db1.php?editar=<?= $produto['id'] ?>">Editar</a>
 
                     <!-- EXCLUIR -->
-                    <form method="POST" action="db1.php" style="display:inline" ;>
+                    <form method="POST" action="db1.php" style="display:inline;" >
                         <input type="hidden" name="id" value="<?= $produto['id'] ?>">
                         <button type="submit" name="excluir" onclick="return confirm ('Deseja excluir esse produto')">Excluir</button>
                     </form>
