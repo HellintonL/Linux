@@ -1,4 +1,5 @@
 <?php
+//IMPORTANDO ARQUIVO DE CONEXÃO 
 require_once "../conexao.php";
 
 // 1. CRIAR TABELA
