@@ -1,0 +1,17 @@
+------------------------------------------------------------------
+DDL - DATA DEFINITION LANGUAGE (Linguagem de Definição de Dados)
+------------------------------------------------------------------
+CREATE - Cria  bancos, tabelas etc;
+ALTER - Altera a tabela;
+DROP - Remove objetos(tabelas, bancos etc);
+TRUNCATE - Esvazia uma tabela(mantém a estrutura);
+RENAME - Renomeia objetos.
+------------------------------------------------------------------
+DML - DATA MANIPULATION LANGUAGE (Linguagem de Manipulação de Dados)
+------------------------------------------------------------------
+INSERT - Insere novos registros;
+UPDATE - Atualiza registros existentes;
+DELETE - Exclui registros.
+------------------------------------------------------------------
+DQL - DATA QUERY LANGUAGE (Linguagem de Consulta de Dados)
+SELECT - Consulta registros.
