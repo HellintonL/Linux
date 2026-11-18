@@ -34,13 +34,16 @@ if ($acao === 'sair') {
     exit;
 }
 if ($acao === 'cadastrar') {
-    $nome = $_POST['nome'] ?? '';
+    $nome = trim ($_POST['nome'] ?? '');
     $descricao = $_POST['descricao'] ?? '';
-    $preco = $_POST['preco'] ?? '';
+    $preco = filter_input(INPUT_POST, 'preco', FILTER_VALIDATE_FLOAT);
     $estoque = $_POST['estoque'] ?? '';
     $categoria = $_POST['categoria'] ?? '';
-    $sql = "INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES ('$nome', '$descricao', '$preco', '$estoque', '$categoria')";
-    $pdo->exec($sql);
+    $sql = 'INSERT INTO produtos (nome, descricao, preco, estoque, categoria) VALUES (:$nome, :$descricao, :$preco, :$estoque, :$categoria)';
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([
+        ':nome' => $nome,
+        ':preco' => $preco]);
     $mensagem = "Produto $nome cadastrado!";
 }
 if ($acao === 'atualizar') {
