@@ -43,18 +43,22 @@ if ($acao === 'cadastrar') {
     $stmt = $pdo->prepare($sql);
     $stmt->execute([
         ':nome' => $nome,
-        ':preco' => $preco]);
+        ':descricao' => $descricao,
+        ':preco' => $preco,
+        ':estoque' => $estoque,
+        ':categoria' => $categoria]);
     $mensagem = "Produto $nome cadastrado!";
 }
 if ($acao === 'atualizar') {
-    $id = $_POST['id'] ?? '';
+    $id = $_GET['id'] ?? '';
     $nome = $_POST['nome'] ?? '';
     $descricao = $_POST['descricao'] ?? '';
     $preco = $_POST['preco'] ?? '';
     $estoque = $_POST['estoque'] ?? '';
     $categoria = $_POST['categoria'] ?? '';
-    $sql = "UPDATE produtos SET nome='$nome', descricao='$descricao', preco='$preco', estoque='$estoque', categoria='$categoria' WHERE id=$id";
-    $pdo->exec($sql);
+    $sql = "UPDATE produtos SET nome='$nome', descricao='$descricao', preco='$preco', estoque='$estoque', categoria='$categoria' WHERE id= :id";
+    $stmt = $pdo->prepare($sql);
+    $stmt->$pdo->exec(['id' => $id ]);
     $mensagem = 'Produto atualizado.';
 }
 if ($acao === 'excluir') {
