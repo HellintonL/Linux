@@ -155,10 +155,10 @@ $total = $pdo->query('SELECT COUNT(*) FROM produtos')->fetchColumn();
                         <?php foreach ($produtos as $produto): ?>
                             <tr>
                                 <td><?= $produto['id'] ?></td>
-                                <td><?= htmlspecialchars($produto["nome"], ENT_QUOTS | ENT_SUBSTITUTE, 'UTF-8') ?> </td>
+                                <td><?= htmlspecialchars($produto["nome"], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF-8') ?> </td>
                                 <td><?= $produto['descricao'] ?></td>
                                 <td><?= $produto['categoria'] ?></td>
-                                <td> R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
+                                <td>PREÇO: R$ <?= number_format($produto["preco"], 2, ",", ".") ?></td>
                                 <td><?= $produto['estoque'] ?></td>
                                 <td><a href="?editar=<?= $produto['id'] ?>">Editar</a> <a href="?acao=excluir&id=<?= $produto['id'] ?>">Excluir</a></td>
                             </tr>
