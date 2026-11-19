@@ -8,7 +8,7 @@ CREATE TABLE
                     -- CORREÇÃO: Aumentar o limite de caracteres pois a senha normalmente não é armazenada só escrito, ela é armazenada em códigos hashes que possuem muito mais caracteres | Adicionar NOT NULL
         senha VARCHAR(225) NOT NULL,
                     -- CORREÇÃO: Adicionar: NOT NULL DEFAULT 'operador'
-        perfil VARCHAR(225) NOT NULL DEFAULT 'operador'
+        perfil VARCHAR(30) NOT NULL DEFAULT 'operador'
     );
 
 CREATE TABLE
