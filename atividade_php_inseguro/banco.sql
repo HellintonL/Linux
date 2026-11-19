@@ -1,10 +1,14 @@
 CREATE TABLE
     IF NOT EXISTS usuarios (
         id INT AUTO_INCREMENT PRIMARY KEY,
+                    -- CORREÇÃO: Adicionar NOT NULL
         nome VARCHAR(120) NOT NULL,
-        email VARCHAR(150) NOT NULL,
-        senha VARCHAR(150) NOT NULL,
-        perfil VARCHAR(30)
+                    -- Correção: Adicionar: NOT NULL UNIQUE
+        email VARCHAR(150) NOT NULL UNIQUE,
+                    -- CORREÇÃO: Aumentar o limite de caracteres pois a senha normalmente não é armazenada só escrito, ela é armazenada em códigos hashes que possuem muito mais caracteres | Adicionar NOT NULL
+        senha VARCHAR(225) NOT NULL,
+                    -- CORREÇÃO: Adicionar: NOT NULL DEFAULT 'operador'
+        perfil VARCHAR(225) NOT NULL DEFAULT 'operador'
     );
 
 CREATE TABLE
