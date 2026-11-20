@@ -1,6 +1,9 @@
 <?php
-// Objetivo: localizar, explicar e corrigir vulnerabilidades.
-ini_set('display_errors', 1);
+// Display_errors, 0/ false 1/true = Não exibir o erro interno para qualquer usuário
+ini_set('display_errors', 0);
+// log_errors, '1' = Registrar os logs num arquivo interno qual o usuário padrão não possui acesso
+ini_set('log_errors', '1');
+// Define quais tipos de erro o PHP deve registrar, E_ALL = TODOS os erros
 error_reporting(E_ALL);
 session_start();
 $host = 'localhost';
@@ -11,14 +14,18 @@ try {
     $pdo = new PDO("mysql:host=$host;dbname=$banco;charset=utf8mb4", $usuario, $senha);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die('Falha no banco: ' . $e->getMessage());
+    error_log($e->getMessage());
+    http_response_code(500);
+    exit('Erro interno de conexão.');
 }
 $mensagem = $_GET['msg'] ?? '';
-$acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    $acao = $_POST['acao'] ?? $_GET['acao'] ?? '';
+}
 if ($acao === 'login') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['senha'] ?? '';
-    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$password'";
+    $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :password";
     $encontrado = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     if ($encontrado) {
         $_SESSION['usuario'] = $encontrado['nome'];
