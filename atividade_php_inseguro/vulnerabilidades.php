@@ -26,6 +26,12 @@ if ($acao === 'login') {
     $email = $_POST['email'] ?? '';
     $password = $_POST['senha'] ?? '';
     $sql = "SELECT * FROM usuarios WHERE email = :email AND senha = :password";
+
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->execute([
+        'email' => $email,
+        'password' => $password]);
     $encontrado = $pdo->query($sql)->fetch(PDO::FETCH_ASSOC);
     if ($encontrado) {
         $_SESSION['usuario'] = $encontrado['nome'];
@@ -63,20 +69,25 @@ if ($acao === 'atualizar') {
     $preco = $_POST['preco'] ?? '';
     $estoque = $_POST['estoque'] ?? '';
     $categoria = $_POST['categoria'] ?? '';
-    $sql = "UPDATE produtos SET nome='$nome', descricao='$descricao', preco='$preco', estoque='$estoque', categoria='$categoria' WHERE id= :id";
+    $sql = "UPDATE produtos SET nome= :nome, descricao= :descricao, preco= :preco, estoque= :estoque, categoria= :categoria WHERE id= :id";
     $stmt = $pdo->prepare($sql);
-    $stmt->$pdo->exec(['id' => $id ]);
+    $stmt->execute(['nome' => $nome,
+                    'descricao' => $descricao,
+                    'preco' => $preco,
+                    'estoque' => $estoque,
+                    'categoria' => $categoria,
+                    'id' => $id]);
     $mensagem = 'Produto atualizado.';
 }
 if ($acao === 'excluir') {
     $id = $_GET['id'] ?? '';
-    $pdo->exec("DELETE FROM produtos WHERE id=$id");
+    $pdo->exec("DELETE FROM produtos WHERE id= :id");
     $mensagem = 'Produto excluído.';
 }
 $busca = $_GET['busca'] ?? '';
 $categoriaFiltro = $_GET['categoria'] ?? '';
 $ordem = $_GET['ordem'] ?? 'id';
-$sqlLista = "SELECT * FROM produtos WHERE (nome LIKE '%$busca%' OR descricao LIKE '%$busca%')";
+$sqlLista = "SELECT * FROM produtos WHERE (nome LIKE :busca OR descricao LIKE '%$busca%')";
 if ($categoriaFiltro !== '') {
     $sqlLista .= " AND categoria = '$categoriaFiltro'";
 }
